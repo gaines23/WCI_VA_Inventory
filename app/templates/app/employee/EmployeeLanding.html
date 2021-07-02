@@ -1,0 +1,179 @@
+
+{% extends "app/employee/EmployeeLayout.html" %}
+
+{% block empcontent %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'content/EmployeeLanding.css' %}">
+    <script type="text/javascript" src= "{% static 'scripts/jquery-1.3.2.js' %}"></script>
+    <script type="text/javascript" src= "{% static 'scripts/jquery-ui.js' %}"></script>    
+</head>
+
+        <div class="EmpTabs">
+            <button id="Search" class="TabSelect tablink active" onclick="openTab(event, 'employeeInfo')">Search Employees</button>
+
+            <button id="Add" class="TabSelect tablink" onclick="openTab(event, 'addEmp')">Add Employee</button>
+        </div>
+
+
+        <div class="blank"></div>
+
+
+    <div class="LandingForm">
+
+            <div class="EmpTable">
+                <div class="EmpSearch">
+                    <table class="table table-bordered" id="emptable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    First Name &nbsp;&nbsp;&#8645;
+                                </th>
+                                <th>
+                                    Last Name &nbsp;&nbsp;&#8645;
+                                </th>
+                                <th>
+                                    Job &nbsp;&nbsp;&#8645;
+                                </th>
+                                <th>
+                                    Department &nbsp;&nbsp;&#8645;
+                                </th>
+                                <th>
+                                    Date Added &nbsp;&nbsp;&#8645;
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in emps %}
+                                <tr>  
+                                    <td>
+                                        <a href="/EmployeeDetails/{{row.employeeid}}">{{row.empfirstname}}
+                                        </a>
+                                    </td>
+                                    <td>{{ row.emplastname }}</td>
+                                    <td>{{ row.job }}</td>
+                                    <td>{{ row.department }}</td>
+                                    <td>{{ row.dateadded }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        <div class="landing" id="employeeInfo">
+
+            <div class="EmpSearchBox">
+                <p id="title">Search Employees</p>
+                
+                <div class="FirstSec">
+                    <div class="First_Search">
+                        <p>First Name</p>
+                        <input type="text" class="First" id="FirstNameInput" onkeyup="FirstSearch()" onfocus="this.value=''">
+                    </div> 
+
+                    <div class="Last_Search">
+                        <p>Last Name</p>
+                        <input type="text" class="Last" id="LastNameInput" onkeyup="LastSearch()" onfocus="this.value=''">
+                    </div>
+                </div>
+
+                <div class="SecondSec">
+                    <div class="Dept_Search">
+                        <p>Department</p>
+                        <input type="text" class="Dept" id="DeptInput" onkeyup="DeptSearch()" onfocus="this.value=''">
+                    </div>
+
+                    <div class="Job_Search">
+                        <p>Job</p>
+                        <input type="text" class="Job" id="JobInput" onkeyup="JobSearch()" onfocus="this.value=''">
+                    </div>
+                </div>
+
+                <div class="EmpSearchButtons">  
+                    <a href="/EmployeeDetails/{{row.employeeid}}" class="InventorySearch" id="inventoryButton">
+                        <p id="resetemp">Reset</p>
+                    </a>
+                </div> 
+            </div>
+
+        </div>
+
+
+        <div class="landing" id="addEmp" style="display:none">
+
+            <form class="EmpInfoForm" id="info" method='POST'> 
+                <p id="emptitle">Add New Employee</p>
+                {% csrf_token %}
+                {{ form }}
+                        <div class="FirstRow">
+                            <div class="firstName">
+                                <p>First Name:</p>
+                                {{ empinfoform.empfirstname }}                            
+                            </div>
+                            <div class="lastName">
+                                <p>Last Name:</p>
+                                {{ empinfoform.emplastname }}
+                            </div>
+                        </div>
+                    
+                        <div class="SecondRow">
+                            <div class="dept">
+                                <p for="id_department">Department:</p>
+                                {{empinfoform.department}} 
+                            </div>   
+                            <div class="job">
+                                <p>Job:</p>
+                                {{empinfoform.job}}
+                            </div>
+                        </div>
+
+                        <div class="ThirdRow">
+                            <div class="hire">
+                                <p>Date Added:</p>
+                                {{ empinfoform.dateadded }}
+                                {{ empinfoform.employeeid }}
+                            </div>
+                        </div>
+
+                        <div class="AddSubmit">
+                            <input type="submit" name="emp" id="AddEmpButton" value="Add Employee">
+                        </div>
+            </form>
+        </div>
+    
+
+    </div>
+
+    <script type="text/javascript" src= "{% static 'scripts/EmployeeLanding.js' %}"></script>
+
+    <script language="Javascript" type="text/javascript">
+
+        $( function() {
+            var availableTags = [
+                {% for dept in emps %}
+                    "{{dept.department}}",
+                {% endfor %}
+            ];
+            $( "#id_department" ).autocomplete({
+              source: availableTags
+            });
+          } );
+
+        $( function() {
+            var availableTags = [
+                {% for job in emps %}
+                    "{{job.job}}",
+                {% endfor %}
+            ];
+            $( "#id_job" ).autocomplete({
+              source: availableTags
+            });
+          } );   
+
+    </script>
+
+    {% endblock %}
+
+

@@ -1,0 +1,57 @@
+
+/* Action Buttons */
+.ActionButtons{
+    margin-right: 1%;
+    height: 50%;
+    width: 20%;
+    margin-top: 8%;
+    float: right;
+    text-align: center;
+}
+
+.MainContainer .ActionButtons .Setup{
+    width: 100%;
+    height: 100%;
+    margin-top: 15%;
+}
+
+.MainContainer .ActionButtons .Setup #title{
+    font-size: 30px;
+    width: 85%;
+}
+
+.MainContainer .ActionButtons .Setup form{
+    height: 100%;
+    width: 85%;
+}
+
+.MainContainer .ActionButtons .Setup label{
+    font-size: 25px;
+}
+
+.MainContainer .ActionButtons .Setup form #id_department,
+#id_job{
+    width: 90%;
+    height: 13%;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.MainContainer .ActionButtons .Setup .DeptJobForm p
+input{
+    width: 60%;
+    border: 1px solid black;
+    height: 50px;
+    color: white;
+    font-size: 25px;
+    background-color: royalblue;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    margin-top: 10px;  
+}

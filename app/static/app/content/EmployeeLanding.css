@@ -1,0 +1,532 @@
+
+
+.MainContainer .SearchBar{
+    height: 10%;
+    width: 91%;
+    padding-top: 15px;
+    margin-left: 7%;
+}
+
+.SearchBar .InstructionTitle, .SearchBox{
+    display: none;
+}
+
+
+/* Tabs */
+.EmployeeResults .EmpTabs{
+    width: 65%;
+    height: 65px;
+    border-bottom: 0px;
+    overflow: hidden;
+}
+
+.tablink:hover{
+    background-color: royalblue;
+    color: white;
+}
+
+.EmpTabs button.active{
+    background-color: royalblue;
+    color: white;
+}
+
+.EmpTabs button{
+    float: left;
+    background-color: inherit;
+    outline: none;
+}
+
+.blank{
+    float: right;
+    width: 57%;
+    text-align: center;
+    border-top: 2.5px solid grey;
+    border-top-right-radius: 30px 30px;
+    border-right: 2px grey solid;
+    height: 30px;
+}
+
+.EmpTabs #Search{
+    width: 33.3%;
+    height: 65px;
+    margin-left: 0px;
+    border: 0px;
+    border-top-right-radius: 30px 30px;    
+    padding: 0px;
+    border-right: 2px grey solid;
+    border-top: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    font-size: 25px;
+}
+
+.EmpTabs #Add{
+    width: 33.3%;
+    height: 65px;
+    margin-left: 0px;
+    border: 0px;
+    border-top-right-radius: 30px 30px;    
+    padding: 0px;
+    border-right: 2px grey solid;
+    border-top: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    font-size: 25px;
+}
+
+.LandingForm{
+    width: 100%;
+    float: right;
+    height: 87%;
+    border-right: 2px solid grey;
+    border-bottom-right-radius: 30px 30px;
+}
+
+.landing{
+    height: 100%;
+    width: 35%;
+}
+
+
+
+
+
+
+/* Inv Table results */
+.EmpTable{
+    width: 65%;
+    height: 90%;
+    margin-top: 20px;
+    float: right;
+    border-left: 1px lightgrey solid;
+}
+ .EmpTable .EmpSearch{
+    width: 95%;
+    float: right;
+    height: 100%;
+    margin-right: 25px;
+    overflow-y: auto;
+    border-top-right-radius: 15px 15px;
+    border-top-left-radius: 15px 15px;
+}
+
+.EmpTable .EmpSearch table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.EmpTable .EmpSearch #emptable thead{
+    font-size: 30px;
+    background-color: royalblue;
+    color: white;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.EmpTable .EmpSearch #emptable thead tr{
+    position: sticky;
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+    width: 20%;
+}
+
+.EmpTable .EmpSearch #emptable thead th{
+    border-bottom: 1px solid black;
+    background-color: royalblue;
+    color: white;
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+.EmpTable .EmpSearch #emptable tbody{
+    text-align: center;
+}
+
+.EmpTable .EmpSearch #emptable tbody tr{
+    font-size: 25px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+.EmpSearch #emptable tbody td{
+    width: 200px;
+    height: 70px;
+    font-size: 25px;
+    border: none;
+    font-family: Arial;
+    padding-top: 20px;
+}
+
+.EmpTable .EmpSearch #emptable tbody tr td a{
+    text-decoration: none;
+    font-weight: bold;
+    color: royalblue;
+}
+
+ #emptable tr:nth-child(even){background-color: #f2f2f2;}
+ #emptable tr:hover {background-color: #ddd;}
+
+
+
+
+
+
+
+
+
+
+
+/* Inventory Search Query and Results Form */
+.EmpSearchBox{
+    width: 95%;
+    float: left;
+    height: 100%;
+}
+
+.EmpSearchBox #title{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.EmpSearchBox .FirstSec, .SecondSec{
+    width: 100%;
+    height: 25%;
+}
+
+.EmpSearchBox p{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.EmpSearchBox .FirstSec .First_Search{
+    float: left;
+    width: 45%;
+    height: 80%;
+    margin-left: 10px;
+}
+
+.EmpSearchBox .First_Search #FirstNameInput{
+    width: 100%;
+    height: 65px;
+    float: left;
+    margin-left: 10px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.EmpSearchBox .FirstSec .Last_Search{
+    float: right;
+    width: 45%;
+    margin-right: 10px;
+    height: 80%;
+    font-size: 25px;
+}
+
+.EmpSearchBox .Last_Search #LastNameInput{
+    width: 100%;
+    height: 65px;
+    float: right;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.EmpSearchBox .SecondSec .Job_Search{
+    float: right;
+    width: 45%;
+    height: 80%;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.EmpSearchBox .Job_Search #JobInput{
+    width: 100%;
+    height: 65px;
+    float: right;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.EmpSearchBox .SecondSec .Dept_Search{
+    float: left;
+    width: 45%;
+    margin-left: 10px;
+    height: 80%;
+    font-size: 25px;
+}
+
+.EmpSearchBox .Dept_Search #DeptInput{
+    width: 100%;
+    height: 65px;
+    float: left;
+    margin-left: 10px;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+/* Inv Search and Reset Buttons */
+.EmpSearchButtons{
+    float: right;
+    width: 35%;
+    margin-top: 20px;
+    margin-left: 45px;
+}
+
+.EmpSearchButtons #resetemp{
+    border: 1px solid black;
+    padding-top: 11px;
+    text-align: center;
+    width: 100%;
+    background-color: royalblue;
+    color: white;
+    height: 50px;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-decoration: none;    
+}
+
+.EmpSearchButtons .InventorySearch{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add Employee */
+
+.EmpInfoForm{
+    width: 95%;
+    float: left;
+    height: 100%;
+}
+
+.EmpInfoForm #emptitle{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 0px;
+}
+
+.EmpInfoForm .FirstRow, .SecondRow{
+    width: 100%;
+    height: 20%;
+}
+
+.FirstRow .firstName{
+    float: left;
+    width: 45%;
+    height: 80%;
+    margin-left: 10px;
+}
+
+.EmpInfoForm .FirstRow .firstName input{
+    width: 100%;
+    height: 65px;
+    float: left;
+    font-size: 25px;
+    margin-left: 10px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.EmpInfoForm .FirstRow .firstName p{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.FirstRow .lastName p{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.FirstRow .lastName{
+    float: right;
+    width: 45%;
+    margin-right: 10px;
+    height: 80%;
+    font-size: 25px;
+}
+
+.FirstRow .lastName input{
+    width: 100%;
+    height: 65px;
+    float: right;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.SecondRow .job p{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.SecondRow .job{
+    float: right;
+    width: 45%;
+    margin-right: 10px;
+    height: 80%;
+    font-size: 25px;
+}
+
+.SecondRow .job #id_job{
+    width: 100%;
+    height: 65px;
+    float: right;
+    font-size: 25px;
+    border: 1px solid grey;
+    padding-top: 15px;
+    font-family: Arial;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.SecondRow .dept p{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.SecondRow .dept{
+    float: left;
+    width: 45%;
+    height: 80%;
+    margin-left: 10px;
+}
+
+.SecondRow .dept #id_department{
+    width: 100%;
+    height: 65px;
+    float: left;
+    font-size: 25px;
+    margin-left: 10px;
+    padding-top: 15px;
+    font-family: Arial;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.ThirdRow{
+    width: 100%;
+    height: 25%;
+    margin-left: 10px;
+}
+
+.ThirdRow .hire p{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.ThirdRow .hire{
+    font-size: 30px;
+    height: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.ThirdRow .hire label{
+    margin-left: 40%;
+}
+
+.ThirdRow .hire input{
+    height: 65px;
+    text-align: center;
+    width: 100%;
+    font-family: Arial;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ThirdRow .hire #id_employeeid{
+    display: none;
+}
+
+/* Edit/Delete Buttons */
+.AddSubmit{
+    float: right;
+    width: 35%;
+    margin-left: 45px;
+}
+
+
+.AddSubmit input{
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
+    background-color: royalblue;
+    color: white;
+    height: 50px;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-decoration: none;    
+}
+

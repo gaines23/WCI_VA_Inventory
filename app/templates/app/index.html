@@ -1,0 +1,22 @@
+﻿{% extends "app/layout.html" %}
+
+{% block maincontent %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'content/index.css' %}">
+</head>
+
+    <div class="Title">
+        <div class="TitlePicture">
+            <img src="{% static 'Images/WHITE_logo.gif' %}">
+        </div>
+        <div class="TitleText">
+            <div id="GMS">White Conveyors</div>
+                <br>
+            <div id="White">Inventory Management System</div>
+        </div>
+    </div>
+
+    
+{% endblock %}

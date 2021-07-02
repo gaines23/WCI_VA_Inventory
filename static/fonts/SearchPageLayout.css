@@ -1,0 +1,559 @@
+
+/* Main Container holds all of the information 
+    necessary for each page
+
+    This code will change per page. This is where
+    we will mostly be doing editing and updating
+
+*/
+
+@charset "UTF-8";
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+img, embed,
+object, video {
+    max-width: 100%;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background-color: #cccccc;
+    margin: 0px;
+    height: 100%;
+}
+
+header{
+    height: 10%;
+    width: 100%;
+}
+
+.RightSideInfo{
+    float: right;
+    width: 25%;
+    margin-right: 25px;
+}
+
+.UserInfo{
+    width: 75%;
+    float: right;
+    margin-top: 18px;
+    font-size: 25px;
+    font-family: sans-serif;
+    border-right: solid lightgrey;
+    height: 65px;
+    padding-right: 20px;
+}
+
+.UserInfo p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.UserInfo .User{
+    color: white;
+    padding-right: 15px;
+    float: right;
+}
+
+.UserInfo .Op{
+    color: #818181;
+    float: right;
+    padding-right: 15px;
+}
+
+.Exit{
+    width: 25%;
+    float: right;
+    height: 100px;
+}
+
+.Exit .ExitButton{
+    width: 30px;
+    height: 35px;
+    margin-top: 35px;
+    margin-left: 30px;
+}
+
+.TopLogo{
+    float: left;
+    width: 25%;
+    margin-left: 25px;
+    height: 100%;
+}
+
+.TopLogo img{
+    height: 70px;
+    float: left;
+    margin-top: 15px;
+}
+
+.TopLogo p{
+    width: 290px;
+    float: left;
+    padding-left: 20px;
+    font-size: 21px;
+    margin-top: 25px;
+    color: royalblue;
+}
+
+
+
+
+
+
+
+
+
+.MainContainer{
+    background-color: #f2f2f2;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    height: 80%;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: sans-serif;
+;
+}
+
+.MainContainer .SearchBar{
+    height: 23%;
+    width: 91%;
+    padding-top: 15px;
+    margin-left: 7%;
+}
+
+.MainContainer .SearchBar .InstructionTitle{
+    border-top: 4px royalblue solid;
+    border-right: 4px royalblue solid;
+    border-left: 4px royalblue solid;
+    width: 17.5%;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    height: 45px;
+}
+
+.MainContainer .SearchBar .InstructionTitle p{
+    font-size: 35px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 8%;
+    text-align: center;
+}
+
+.SearchBar .SearchBox{
+    height: 65%;
+    width: 95%;
+    float: left;
+    border-left: 4px royalblue solid;
+    border-bottom: 4px royalblue solid;    
+    border-right: 4px royalblue solid;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.SearchBar .SearchBox .Garment h2, .TypeStyle h2, .Dept h2, .AltID h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.SearchBar .SearchBox .Garment{
+    width: 19%;
+    text-align: center;
+    float: right;
+    border-top: 4px royalblue solid;
+    padding-top: 10px;
+}
+
+.SearchBar .SearchBox .TypeStyle{
+    float: right;
+    text-align: center;
+    border-top: 4px royalblue solid;
+    padding-top: 10px;
+    width: 21%;
+}
+
+.SearchBar .SearchBox .Dept{
+    float: right;
+    text-align: center;
+    border-top: 4px royalblue solid;
+    padding-top: 10px;
+    width: 21%;
+}
+
+.SearchBar .SearchBox .AltID{
+    float: right;
+    text-align: center;
+    border-top: 4px royalblue solid;
+    border-top-right-radius: 30px 30px;
+    padding-top: 10px;
+    width: 21%;
+}
+
+.SearchBar .SearchBox .GarmentInput{
+    height: 50px;
+    width: 83%;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.SearchBar .SearchBox .GarmentInput, .TypeStyleInput, .DeptInput, .AltInput{
+    height: 50px;
+    width: 80%;
+    font-size: 25px;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+}
+
+.SearchResults {
+    margin-top: 0px;   
+    width: 25%;
+    height: 67%;
+    margin-top: 1%;
+    float: left;
+    margin-left: 5%;
+    border-left: 2px grey solid;
+    border-bottom: 2px grey solid;
+    border-bottom-right-radius: 30px 30px;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+}
+
+.SearchResults .SearchTitle{
+    width: 70%;
+    text-align: center;
+    border-top: 2px solid grey; 
+    border-right: 2px solid grey;
+    height: 65px;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.SearchResults .SearchTitle p{
+    margin-top: 0px;
+    height: 30px;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.TableSection{
+    height: 89%;
+    border-right: 2px grey solid;
+    border-top-right-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+}
+
+.SearchResults .blank{
+    float: right;
+    width: 30%;
+    text-align: center;
+    border-top: 2px solid grey; 
+    height: 25px;
+    border-top-right-radius: 30px 30px;
+}
+
+#table-wrapper{
+    position: relative;
+    height: 100%;
+    padding-top: 5%;
+    width: 95%;
+    margin-left: 10px;
+}
+
+#table-scroll{
+    height: 625px;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+#table-wrapper table{
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+}
+
+#table-wrapper table *{
+    background: white;
+    color: darkblue;
+    font-size: 18px;
+}
+
+#table-wrapper table tr td{
+    border: 1px solid black;
+}
+
+.MainContainer .InventoryResults{
+    height: 65%;
+    width: 45%;
+    background-color: white;
+    float: left;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+}
+
+.InventoryResults .GarmentTitle{
+    width: 45%;
+    text-align: center;
+    border-top: 2px solid grey; 
+    border-right: 2px solid grey;
+    height: 65px;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+}
+
+.InventoryResults .GarmentTitle p{
+    margin-top: 0px;
+    height: 30px;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.InventoryResults .blank{
+    float: right;
+    width: 55%;
+    text-align: center;
+    border-top: 2px solid grey; 
+    height: 25px;
+    border-top-right-radius: 30px 30px;
+}
+
+.InventoryResults .InvForm{
+    height: 89%;
+    border-right: 2px solid grey;
+    border-top-right-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+}
+
+.ActionButtons{
+    height: 65%;
+    width: 20%;
+    margin-top: 4%;
+    float: right;
+}
+
+.ActionButtons .Add, .Edit, .Delete{
+    height: 33%;
+    width: 100%;
+}
+
+.ActionButtons .AddButton, .EditButton, .DeleteButton{
+    height: 60%;
+    width: 80%;
+    border-top-right-radius: 80px 90px;
+    border-bottom-right-radius: 80px 90px;
+    border-top-left-radius: 80px 90px;
+    border-bottom-left-radius: 80px 90px;
+    font-size: 40px;
+}
+
+
+
+
+
+
+footer{
+    height: 10%;
+    background-color: #f2f2f2;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+footer .MenuBar{
+    width: 80%;
+    height: 100%;
+    margin-left: 180px;
+    background-color: #4d4d4d;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 11px 0px 9px #b8b8b8;
+}
+
+footer .MenuBar .Inventory, .Employees, .Activity,
+.Orders, .Cleaning, .Repairs, .Reports, .Settings{
+    width: 12.5%;
+    float: left;
+    padding-top: 1%;
+    height: 95px;
+    color: #8a8a8a;
+    font-family: sans-serif;
+}
+
+footer .MenuBar .Inventory{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Inventory .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Inventory #InvTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Employees{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Employees .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Employees #EmpTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Activity{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Activity .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Activity #ActTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Orders{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Orders .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Orders #OrdTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Cleaning{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Cleaning .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Cleaning #ClTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Repairs{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Repairs .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Repairs #RepTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Reports{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Reports .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Reports #ReportTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}
+
+footer .MenuBar .Settings{
+    border-top-left-radius: 25px;
+    text-decoration: none;
+}
+
+footer .MenuBar .Settings .Button{
+    height: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer .MenuBar .Settings #SetTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #8a8a8a;
+}

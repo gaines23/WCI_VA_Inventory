@@ -1,0 +1,67 @@
+{% extends "app/employee/EmployeeLayout.html" %}
+
+{% block empcontent %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/app/content/AddEmployee.css">
+</head>
+
+        <div class="Title">
+            <h2>Add New Employee </h2> 
+        </div>
+
+        <div class="blank"></div>
+
+        <div class="EmpForm">
+
+            <form class="EmpInfoForm" id="info" method='POST'>
+                    {% csrf_token %}
+                    {{ form }}
+                    <div class="Employee">
+                        <div class="FirstRow">
+                            <p id="lastName">
+                                <label for="id_empfirstname">First Name:</label>
+                                    <br>
+                                {{empinfoform.empfirstname}}
+                            </p>
+                            <p id="lastName">
+                                <label for="id_emplastname">Last Name:</label>
+                                    <br>
+                                {{empinfoform.emplastname}}
+                            </p>
+                        </div>
+                    
+                        <div class="SecondRow">
+                            <p id="dept">
+                                <label for="id_department">Department:</label>
+                                    <br>
+                                {{empinfoform.deptid}}
+                            </p>   
+                            <p id="job">
+                                <label for="id_jobid">Job:</label>
+                                    <br>
+                                {{empinfoform.jobid}}
+                            </p>
+                        </div>
+
+                        <div class="ThirdRow">
+                            <p id="hire">
+                                <label for="id_dateadded">Date Added:</label>
+                                    <br>
+                                {{empinfoform.dateadded}}
+                            </p>
+                        </div>
+
+                        <div class="EditDelete">
+                            <button class="DeleteEmpButton" id="deleteEmpButton" onclick="SelectAction()">Delete</button>
+
+                            <input type="submit" id="EditEmpButton" value="Update">
+                            
+                        </div>
+                    </div>
+                </form>
+
+        </div>
+
+    {% endblock %}
+

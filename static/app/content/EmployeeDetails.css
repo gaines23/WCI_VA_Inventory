@@ -1,0 +1,501 @@
+.MainContainer .SearchBar{
+    height: 10%;
+    width: 91%;
+    padding-top: 15px;
+    margin-left: 7%;
+}
+
+.SearchBar .InstructionTitle, .SearchBox{
+    display: none;
+}
+
+
+/* Tabs */
+.EmployeeResults .EmpTabs{
+    width: 65%;
+    height: 65px;
+    border-bottom: 0px;
+    overflow: hidden;
+}
+
+.tablink:hover{
+    background-color: royalblue;
+    color: white;
+}
+
+.EmpTabs button.active{
+    background-color: royalblue;
+    color: white;
+}
+
+.EmpTabs button{
+    float: left;
+    background-color: inherit;
+    outline: none;
+}
+
+.blank{
+    float: right;
+    width: 78.6%;
+    text-align: center;
+    border-top: 2.5px solid grey;
+    border-top-right-radius: 30px 30px;
+    border-right: 2px grey solid;
+    height: 30px;
+}
+
+.EmployeeResults .EmpTabs #Info{
+    width: 33.3%;
+    height: 65px;
+    margin-left: 0px;
+    border: 0px;
+    border-top-right-radius: 30px 30px;    
+    padding: 0px;
+    border-right: 2px grey solid;
+    border-top: 2px grey solid;
+    border-top-left-radius: 30px 30px;
+    font-size: 25px;
+}
+
+
+.EmpForm{
+    width: 100%;
+    float: right;
+    height: 87%;
+    border-right: 2px solid grey;
+    border-bottom-right-radius: 30px 30px;
+}
+
+.empInfo{
+    height: 100%;
+    width: 35%;
+    font-size: 25px;
+    float: left;
+}
+
+
+
+
+
+
+/* Emp Details */
+
+.EmpInfoForm{
+    width: 95%;
+    float: left;
+    height: 100%;
+    margin-top: 25px;
+}
+
+.EmpInfoForm #emptitle{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 0px;
+}
+
+.EmpInfoForm .FirstRow, .SecondRow{
+    width: 100%;
+    height: 20%;
+}
+
+.FirstRow .firstName{
+    float: left;
+    width: 45%;
+    height: 80%;
+    margin-left: 10px;
+}
+
+.EmpInfoForm .FirstRow .firstName input{
+    width: 100%;
+    height: 65px;
+    float: left;
+    font-size: 30px;
+    margin-left: 10px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.EmpInfoForm .FirstRow .firstName p{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.FirstRow .lastName p{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.FirstRow .lastName{
+    float: right;
+    width: 45%;
+    margin-right: 10px;
+    height: 80%;
+    font-size: 25px;
+}
+
+.FirstRow .lastName input{
+    width: 100%;
+    height: 65px;
+    float: right;
+    font-size: 30px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.SecondRow .job p{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.SecondRow .job{
+    float: right;
+    width: 45%;
+    margin-right: 10px;
+    height: 80%;
+    font-size: 25px;
+}
+
+.SecondRow .job #id_job{
+    width: 100%;
+    height: 65px;
+    float: right;
+    font-size: 25px;
+    font-family: Arial;
+    padding-top: 15px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.SecondRow .dept p{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.SecondRow .dept{
+    float: left;
+    width: 45%;
+    height: 80%;
+    margin-left: 10px;
+}
+
+.SecondRow .dept #id_department{
+    width: 100%;
+    height: 65px;
+    float: left;
+    font-size: 25px;
+    margin-left: 10px;
+    padding-top: 15px;
+    font-family: Arial;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+}
+
+.ThirdRow{
+    width: 100%;
+    height: 25%;
+    margin-left: 10px;
+}
+
+.ThirdRow .hire p{
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.ThirdRow .hire{
+    font-size: 30px;
+    height: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.ThirdRow .hire label{
+    margin-left: 40%;
+}
+
+.ThirdRow .hire input{
+    height: 65px;
+    text-align: center;
+    width: 100%;
+    font-family: Arial;
+    font-size: 25px;
+    border: 1px solid grey;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* Edit/Delete Buttons */
+#employeeInfo .EditDelete{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.EditDelete input{
+    width: 40%;
+    border: 1px solid black;
+    height: 50px;
+    color: white;
+    font-size: 25px;
+    background-color: royalblue;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    margin-right: 16px;
+}
+
+
+.EditDelete .EditEmpButton{
+    float: right;
+}
+
+.EditDelete #deleteEmpButton{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Assigned Garms */
+.Assigned{
+    width: 65%;
+    height: 90%;
+    float: right;
+    border-left: 1px lightgrey solid;
+}
+
+.Assigned p{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.Assigned #empfullname{
+    font-size: 30px;
+}
+
+.Assigned .EmpGarms{
+    width: 95%;
+    float: right;
+    height: 100%;
+    margin-right: 10px;
+    overflow-y: auto;
+}
+
+.Assigned .EmpGarms table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#empgarmtable{
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;    
+}
+
+.Assigned .EmpGarms thead{
+    font-size: 30px;
+    background-color: royalblue;
+    color: white;
+}
+
+.Assigned .EmpGarms #empgarmtable thead tr{
+    position: sticky;
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid grey;
+    width: 20%;
+}
+
+.Assigned .EmpGarms #empgarmtable thead th{
+    border-bottom: 1px solid black;
+    background-color: royalblue;
+    color: white;
+    position: sticky;
+    /*top: 0;*/
+    text-align: center;
+}
+
+.Assigned .EmpGarms #empgarmtable tbody{
+    text-align: center;
+}
+
+.Assigned .EmpGarms #empgarmtable tbody tr{
+    height: 50px;
+    border: 1px solid grey;
+}
+
+.Assigned .EmpGarms tbody tr td .garmtype{
+    width: 200px;
+    height: 70px;
+    font-size: 25px;
+    border: none;
+    font-family: Arial;
+    padding-top: 20px;
+}
+
+.Assigned .EmpGarms tbody tr td .garmsize{
+    width: 120px;
+    height: 70px;
+    font-size: 25px;
+    border: none;
+}
+
+.Assigned .EmpGarms tbody tr td .dateassigned{
+    width: 220px;
+    height: 70px;
+    text-align: center;
+    font-size: 25px;
+    border: none;
+    font-family: Arial;
+}
+
+.Assigned .EmpGarms tbody tr td .quantity{
+    width: 110px;
+    height: 70px;
+    text-align: center;
+    font-size: 25px;
+    border: none;
+}
+
+.Assigned .EmpGarms tbody tr td select{
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    font-size: 25px;
+    border: none;
+}
+
+ #empgarmtable tr:nth-child(even){background-color: #f2f2f2;}
+ #empgarmtable tr:hover {background-color: #ddd;}
+
+
+
+
+
+/* CSS for each new row of data added on table */
+.Assigned .EmpGarms #empgarmtable tbody tr td .type{
+    width: 200px;
+    height: 70px;
+    font-size: 25px;
+    border: none;
+    font-family: Arial;
+    padding-top: 20px;
+}
+
+.Assigned .EmpGarms #empgarmtable tbody tr td  .size{
+    width: 120px;
+    height: 70px;
+    font-size: 25px;
+    border: none;
+}
+
+.Assigned .EmpGarms #empgarmtable tbody tr td .date{
+    width: 220px;
+    height: 70px;
+    text-align: center;
+    font-size: 25px;
+    border: none;
+    font-family: Arial;
+}
+
+.Assigned .EmpGarms #empgarmtable tbody tr td .quan{
+    width: 110px;
+    height: 70px;
+    text-align: center;
+    font-size: 25px;
+    border: none;
+}
+
+
+
+
+
+
+
+/* Assign New Garm Button */
+.AssignGarm{
+    height: 80px;
+    text-align: center;
+}
+
+.AssignGarm #assignButton{
+    width: 40%;
+    border: 1px solid black;
+    height: 50px;
+    color: white;
+    font-size: 25px;
+    background-color: royalblue;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    margin-right: 30px;
+    margin-top: 20px;  
+}
+
+.AssignGarm #add_more{
+    width: 25%;
+    margin-left: 25%;
+    border: 1px solid black;
+    height: 50px;
+    color: white;
+    font-size: 25px;
+    background-color: royalblue;
+    border-bottom-left-radius: 30px 35px;
+    border-bottom-right-radius: 30px 35px;
+    border-top-right-radius: 30px 35px;
+    border-top-left-radius: 30px 35px;
+    margin-right: 30px;
+    margin-top: 20px;  
+}
+
+
+
+
+
+
+

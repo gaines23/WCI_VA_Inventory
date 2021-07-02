@@ -1,0 +1,163 @@
+{% extends "app/employee/EmployeeLayout.html" %}
+
+{% block empcontent %}
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'content/EmployeeDetails.css' %}">
+    <script type="text/javascript" src= "{% static 'scripts/jquery-1.3.2.js' %}"></script>
+    <script type="text/javascript" src= "{% static 'scripts/jquery-ui.js' %}"></script>    
+
+</head>
+
+        <div class="EmpTabs">
+            <button id="Info" class="TabSelect tablink active" onclick="openTab(event, 'employeeInfo')">Employee Details</button>
+        </div>
+
+        <div class="blank"></div>      
+
+        <div class="EmpForm">
+                    <!-- Employee Info Tab -->
+            <div class="empInfo" id="employeeInfo">
+                <form class="EmpInfoForm" id="info" method='POST'>
+                    {% csrf_token %}
+                    {{ form }}
+                        <div class="FirstRow">
+                            <div class="firstName">
+                                <p>First Name:</p>
+                                {{ empinfoform.empfirstname }}                            
+                            </div>
+                            <div class="lastName">
+                                <p>Last Name:</p>
+                                {{ empinfoform.emplastname }}
+                            </div>
+                        </div>
+                    
+                        <div class="SecondRow">
+                            <div class="dept">
+                                <p for="id_department">Department:</p>
+                                {{ empinfoform.department }}
+                            </div>   
+                            <div class="job">
+                                <p>Job:</p>
+                                {{ empinfoform.job }}
+                            </div>
+                        </div>
+
+                        <div class="ThirdRow">
+                            <div class="hire">
+                                <p>Date Added:</p>
+                                {{ empinfoform.dateadded }}
+                            </div>
+                        </div>
+
+                        <div class="EditDelete">
+                             <input type="submit" name="delete" id="deleteEmpButton" value="Delete">
+
+                            <input type="submit" name="edit" id="EditEmpButton" value="Update">      
+                        </div>
+                </form>
+            </div>
+
+
+                <!-- Employee Garment Info -->
+
+ 
+
+            <div class="Assigned">
+                <p>Assigned Garments for Employee</p>
+                    <div class="EmpGarms">
+                        <form class="AssignActions" method='POST' action="" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ formset.management_form }}
+                            <div class="AssignGarm">
+                                <input type="submit" name="assign" id="assignButton" value="Update Information">
+                                <input type="button" value="Add Garment" id="add_more">
+                            </div>
+                            <table class="table table-bordered" id="empgarmtable">
+                                <thead>
+                                    <tr>
+                                        <th>Delete</th>
+                                        <th>Type &nbsp;&nbsp;&#8645;</th>
+                                        <th>Size &nbsp;&nbsp;&#8645;</th>
+                                        <th>Assigned &nbsp;&nbsp;&#8645;</th>
+                                        <th>Qauntity &nbsp;&nbsp;&#8645;</th>
+                                        <th>Replacement &nbsp;&nbsp;&#8645;</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    {% for emp in formset %}
+                                        <tr>
+                                            <td>{{ emp.DELETE }}</td>
+                                            <td>
+                                                {{ emp.garmtype }}
+                                            </td>
+                                            <td>
+                                                {{ emp.garmsize }}
+                                            </td>
+                                            <td>
+                                                {{ emp.dateassigned }}
+                                            </td>
+                                            <td>
+                                                {{ emp.quantity }}
+                                            </td>
+                                            <td>
+                                                {{ emp.replacement }}
+                                            </td>
+                                            <td>{{ emp.garmentid }}</td>
+                                            <td>{{ emp.employeeid }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+            </div>
+
+
+        </div>
+
+    <script type="text/javascript" src="{% static 'scripts/EmpDetails.js' %}"></script>
+
+    <script language="Javascript" type="text/javascript">
+
+        $( function() {
+            var availableTags = [
+                {% for dept in deptjob %}
+                    "{{dept.department}}",
+                {% endfor %}
+            ];
+            $( "#id_department" ).autocomplete({
+              source: availableTags
+            });
+          } );
+
+        $( function() {
+            var availableTags = [
+                {% for job in deptjob %}
+                    "{{job.job}}",
+                {% endfor %}
+            ];
+            $( "#id_job" ).autocomplete({
+              source: availableTags
+            });
+          } );
+
+
+
+        var form_num = document.getElementById('id_emp-INITIAL_FORMS').getAttribute('value');
+
+        $(document).ready(function() {
+            $("#add_more").click(function() {
+                form_num ++;
+                $("input[id='id_emp-TOTAL_FORMS']").attr('value', form_num --);
+                $("#empgarmtable").prepend("<tr><td><input id='id_emp-" + form_num + "-DELETE del' type='checkbox' name='emp-" + form_num + "-DELETE'></td> <td><textarea id='id_emp-" + form_num + "-garmtype' type='text' name='emp-" + form_num + "-garmtype' class='type'></textarea></td> <td><input id='id_emp-" + form_num + "-garmsize' type='text' name='emp-" + form_num + "-garmsize' class='size'/></td> <td><input id='id_emp-" + form_num + "-dateassigned' type='date' name='emp-" + form_num + "-dateassigned' class='date'/></td> <td><input id='id_emp-" + form_num + "-quantity' type='number' name='emp-" + form_num + "-quantity' class='quan'/></td> <td><select id='id_emp-" + form_num + "-replacement' name='emp-" + form_num + "-replacement' class='rep'><option value='No'>No</option><option value='Yes'>Yes</option></select></td></tr>");
+            });
+        });
+
+    </script>
+
+    {% endblock %}
+    

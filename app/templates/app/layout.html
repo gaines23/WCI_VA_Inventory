@@ -1,0 +1,73 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'content\site.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'content\jquery-ui.css' %}">
+    <script type="text/javascript" src= "{% static 'scripts\jquery-1.3.2.js' %}"></script>
+
+    <title>WCI Garment Management</title>
+</head>
+
+<body>
+    <header>        
+
+        <div class="HomeLogo">
+            <img onclick="window.location.href='{%  url 'home' %}'" src="{% static 'Images\WHITE_logo.gif' %}" class="HomeButton" value="go">
+        </div>
+
+    </header>
+
+    <div class="MainContainer">
+        {% block maincontent %}{% endblock %}
+    </div>
+
+    <footer>
+        <div class="MenuBar">
+            <div class="Directions">
+                <p id="prev">
+                    <input type=button value="&laquo; Previous" onClick="javascript:history.go(-1);">
+                </p>
+                
+                <p id="next">
+                    <input type=button value="Next &raquo;" onClick="javascript:history.go(+1);">
+                </p>
+                <div class="Employees" id="EmployeesButton" onclick="window.location.href='{%  url 'EmployeeLanding' %}'" >
+                    <input type="image" src="{% static 'Images\employee icon.png' %}" class="Button" value="go" >
+                    <p id="EmpTitle">Inventory</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+
+<script language="javascript">
+document.onmousedown=disableclick;
+status="Right Click Disabled";
+function disableclick(event)
+{
+  if(event.button==2)
+   {
+     alert(status);
+     return false;    
+   }
+}
+</script>
+
+
+</html>
+
+
+
+
+
+
+
+
