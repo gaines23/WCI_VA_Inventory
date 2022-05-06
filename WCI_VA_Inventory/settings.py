@@ -21,8 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-with open('C:/WCI/InventoryManagement/WCI_VA_Inventory/app/static/app/Images/secret_key.txt') as f:
-    SECRET_KEY = f.read().strip()
+
 
 #'bc21d46c-3e78-4846-9414-cafd2d99bb74'
 
